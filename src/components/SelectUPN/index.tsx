@@ -11,13 +11,13 @@ import {
   RadioGroup,
 } from "@chakra-ui/react";
 import * as React from "react";
-import { suggestedUPNs, suggestedUPNprefix } from "../../domains/users";
+import { suggestedUPNs, suggestedUPNprefix } from "domains/users";
 
 import { useState, useEffect } from "react";
 import { Select } from '@chakra-ui/react';
 interface SelectUPNProps {
 
-   displayName?: string;
+   displayName: string;
 /**
  * UPN Selected
  */
@@ -56,7 +56,7 @@ export default function SelectUPN({ displayName, onSelected }:SelectUPNProps) {
   );
 }
 
-export function UPN(displayName) {
+export function UPN(displayName:string) {
   const [upn, setupn] = useState<string>();
   return (
     <Box>
